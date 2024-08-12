@@ -1,4 +1,5 @@
-/* properties in alphabetical order */ 
+/* alphabetical order for structure and properties*/ 
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -19,9 +20,25 @@ body {
     font-family: "Urbanist", sans-serif;
 }
 
+details {
+    padding: 20px;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--heading-color);
+    padding: 50px 0;
+
+    & h2 {
+        color: var(--white);
+    }
+}
+
 h1 {
     color: var(--heading-color);
     font-size: 54px;
+    font-weight: 600;
     line-height: 62px;
 
     & span {
@@ -44,20 +61,33 @@ h3 {
 }
 
 main {
-    max-width: 1280px;
-    margin: 0 auto;
+    /* max-width: 1280px;
+    margin: 0 auto; */
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
     padding: 20px 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between; 
 }
 
 p {
     color: var(--paragraph-color);
     font-size: 17px;
     line-height: 29px;
+}
+
+summary {
+    background-color: var(--white);
+    font-size: 18px;
+    font-weight: 600px;
+
+    &::marker {
+        color: var(--primary-color);
+    }
 }
 
 ul {
@@ -77,12 +107,58 @@ ul {
 .btn-primary {
     background-color: var(--primary-color);
     border-radius: 25px;
-    box-shadow: 1px 0.1rem 0.5rem 0px rgb(60 60 60 / 39%);
+    box-shadow: 1px 0.1rem 0.5rem 0px rgb(60 60 60 / 12%);
     color: var(--white);
     display: block;
+    height: fit-content;
     padding: 16px;
     text-decoration: none;
     width: fit-content;
+}
+
+/* Container Styles */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* Faqs Styles */
+.faqs {
+    background-color: var(--gray);
+    padding: 50px 0 100px;
+
+    & h2, 
+    & p {
+        margin-bottom: 20px;
+    }
+}
+
+.faqs-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+}
+
+.faqs-item {
+    box-shadow: 1px 0.1rem 0.5rem 0px rgb(60 60 60 / 12%);
+    cursor: pointer;
+}
+
+.faqs-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Footer Styles */
+.footer-container {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    & .btn-primary {
+        justify-self: center;
+    }
 }
 
 
@@ -105,9 +181,29 @@ ul {
     }
 }
 
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Projects Styles */
+.projects {
+    padding: 50px 0 100px;
+    & h2 {
+        margin: 0 auto 50px;
+        max-width: 780px;
+    }
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
 
 /* Sevices Styles (component) */
-
 .services {
     background-color: var(--light-gray);
     padding: 50px 0;
@@ -138,6 +234,123 @@ ul {
     & p {
         margin: 0 auto 20px;
         max-width: 316px;
+    }
+}
+
+/* Strategy Styles */
+.strategy {
+    background-color: var(--gray);
+    padding: 50px 0 100px;
+
+    & h2 {  
+        margin-bottom: 30px;
+    }
+
+    & p {
+        margin-bottom: 20px;
+    }
+}
+
+.strategy-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.strategy-container {
+    align-items: center;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+} 
+
+.strategy-card {
+    align-items: center;
+    background-color: var(--white);
+    box-shadow: 1px 0.1rem 0.5rem 0px rgb(60 60 60 / 12%);
+    display: flex;
+    gap: 20px;
+    max-width: 520px;
+    padding: 20px;
+    
+    position: relative;
+
+    &:nth-child(2) {
+        left: 50px;
+    }
+
+    &:nth-child(3) {
+        left: 20px;
+    }
+
+    & .order {
+        background-color: var(--skyblue);
+        border-radius: 100%;
+        color: var(--primary-color);
+        font-size: 22px;
+        font-weight: 600;
+        border-radius: 100%;
+        padding: 10px 12px; 
+        width: fit-content;
+    }
+}
+
+
+/* Team styles */
+.team {
+    background-color: var(--gray);
+    padding: 50px 0 100px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr auto;
+    gap: 20px;
+}
+
+.team-item {
+    background-color: var(--white);
+    box-shadow: 1px 0.1rem 0.5rem 0px rgb(60 60 60 / 12%);
+    padding: 20px;
+
+    & h3 {
+        font-size: 20px;
+
+        & + p {
+            color: #aab0bc;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.team-list {
+    display: grid;
+    gap: 20px;
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.team-statistics {
+    display: flex;
+    gap: 100px;
+}
+
+.team-statistics-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+
+    & h3 {  
+        font-size: 41px;
+    }
+
+    & .image {
+        background-color: var(--skyblue);
+        border-radius: 100%;
+        padding: 16px;
+        width: fit-content;
     }
 }
 
