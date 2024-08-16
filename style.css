@@ -79,20 +79,30 @@ nav {
 
     & ul {
         display: none;
-        position: absolute;
-        background-color: var(--primary-color);
         
-        top: 0;
-        left: 0;
-        height: 100vh;
-        /* display: flex; */
-        flex-direction: column;
-        padding: 20px 0;
-        text-align: center;
-        width: 100%;
+        &.active {
+            display: flex;
+            position: absolute;
+            background-color: var(--primary-color);
+            top: 0;
+            left: 0;
+            height: 100vh;
+            /* display: flex; */ /* for test, look menu */
+            flex-direction: column;
+            padding: 50px 0 20px;
+            text-align: center;
+            width: 100%;
+        }
 
         & a {
             color: var(--white);
+        }
+
+        & span {
+            /* font-weight: 600; */
+            position: absolute;
+            right: 13px;
+            top:26px;
         }
     }
 }
@@ -114,6 +124,7 @@ summary {
 }
 
 ul {
+    align-self: center;
     list-style: none;
     display: flex;
     gap: 30px;
@@ -137,6 +148,11 @@ ul {
     padding: 16px;
     text-decoration: none;
     width: fit-content;
+}
+
+.btn-nav {
+    align-self: center;
+    font-weight: 600;
 }
 
 /* Container Styles */
@@ -415,6 +431,10 @@ ul {
 /* media queries */
 @media (min-width: 768px) {
 
+    .btn-nav {
+        display: none;
+    }
+
     .faqs-container {
         gap: 30px;    
     }
@@ -435,11 +455,15 @@ ul {
         }
     }
 
-    /* .nav-container {
+    .nav-container {
         & ul {
             display: flex;
+
+            & a {
+                color: var(--paragraph-color);
+            }
         }
-    } */
+    }
 
     .projects-container {
         grid-template-columns: repeat(2, 1fr);
