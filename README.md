@@ -1,4 +1,4 @@
-# From Figma to Web:
+# From Figma to Web (vanilla code):
 
 - With native CSS3, using the "&" symbol for nesting, kebab-case and alphabetical order for structure and properties. 
 
