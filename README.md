@@ -1,8 +1,8 @@
 # From Figma to Web:
 
-- With native CSS3, using the & symbol for nesting, kebab-case and alphabetical order for structure and properties. 
+- With native CSS3, using the "&" symbol for nesting, kebab-case and alphabetical order for structure and properties. 
 
-- With pure html5 first and then using hard-coded and dynamically-coded data, using the Fetch API, with the json-server dependency: https://www.npmjs.com/package/json-server.
+- With only HTML5 first and then JS (vanilla) with hard-coded and dynamically-coded data, using the Fetch API, with the json-server dependency: https://www.npmjs.com/package/json-server.
 
 - Make the database creating a data.json file.
 
